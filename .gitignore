@@ -1,2 +1,6 @@
-0
-
+*.class
+target/
+.idea/
+*.log
+build/
+out/
