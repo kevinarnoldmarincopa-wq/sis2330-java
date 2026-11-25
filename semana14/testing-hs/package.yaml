@@ -1,0 +1,33 @@
+name: testing-hs
+version: 0.1.0.0
+license: BSD-3-Clause
+author: Kevin Marín Copa
+maintainer: kevin@example.com
+copyright: "2026"
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+  dependencies:
+  - containers
+  - mtl
+
+executables:
+  testing-hs-exe:
+    main: Main.hs
+    source-dirs: app
+    dependencies:
+    - testing-hs
+    - containers
+    - mtl
+
+tests:
+  testing-hs-test:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+    - testing-hs
+    - HUnit
+    - QuickCheck
